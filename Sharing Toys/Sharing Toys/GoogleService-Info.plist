@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>693802326544-u84p3rqm1ku0m1hs4j7n1o365cr0lfvg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.693802326544-u84p3rqm1ku0m1hs4j7n1o365cr0lfvg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBLR-1uYMaGT52oBy5FUeJ3RrGJ8_g8id0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>693802326544</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.geraldosales.Sharing-Toys</string>
+	<key>PROJECT_ID</key>
+	<string>sharingtoys-63ea4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sharingtoys-63ea4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:693802326544:ios:1b131b13d3c87c325a4895</string>
+</dict>
+</plist>

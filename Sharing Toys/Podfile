@@ -6,5 +6,6 @@ target 'Sharing Toys' do
   use_frameworks!
 
   # Pods for Sharing Toys
+  pod 'Firebase/Firestore'
 
 end

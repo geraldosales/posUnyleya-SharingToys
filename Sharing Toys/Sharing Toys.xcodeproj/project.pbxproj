@@ -14,6 +14,7 @@
 		CC0FE9A626E5433E00BDDD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0FE9A426E5433E00BDDD21 /* Main.storyboard */; };
 		CC0FE9A826E5433F00BDDD21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0FE9A726E5433F00BDDD21 /* Assets.xcassets */; };
 		CC0FE9AB26E5433F00BDDD21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0FE9A926E5433F00BDDD21 /* LaunchScreen.storyboard */; };
+		CC0FE9B326E5514300BDDD21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC0FE9B226E5514300BDDD21 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CC0FE9A726E5433F00BDDD21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC0FE9AA26E5433F00BDDD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC0FE9AC26E5433F00BDDD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC0FE9B226E5514300BDDD21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,6 @@
 				6133C105F36EF5B4E242A379 /* Pods-Sharing Toys.debug.xcconfig */,
 				4DFB43B8E95D9692AE4C6CAA /* Pods-Sharing Toys.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -80,6 +81,7 @@
 				CC0FE9A726E5433F00BDDD21 /* Assets.xcassets */,
 				CC0FE9A926E5433F00BDDD21 /* LaunchScreen.storyboard */,
 				CC0FE9AC26E5433F00BDDD21 /* Info.plist */,
+				CC0FE9B226E5514300BDDD21 /* GoogleService-Info.plist */,
 			);
 			path = "Sharing Toys";
 			sourceTree = "<group>";
@@ -103,6 +105,7 @@
 				CC0FE99726E5433E00BDDD21 /* Sources */,
 				CC0FE99826E5433E00BDDD21 /* Frameworks */,
 				CC0FE99926E5433E00BDDD21 /* Resources */,
+				4F2D51BD39019ED32D68DD2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC0FE9AB26E5433F00BDDD21 /* LaunchScreen.storyboard in Resources */,
+				CC0FE9B326E5514300BDDD21 /* GoogleService-Info.plist in Resources */,
 				CC0FE9A826E5433F00BDDD21 /* Assets.xcassets in Resources */,
 				CC0FE9A626E5433E00BDDD21 /* Main.storyboard in Resources */,
 			);
@@ -159,6 +163,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4F2D51BD39019ED32D68DD2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sharing Toys/Pods-Sharing Toys-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sharing Toys/Pods-Sharing Toys-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sharing Toys/Pods-Sharing Toys-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F17D1EC6D1265F9CDED0F6B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
