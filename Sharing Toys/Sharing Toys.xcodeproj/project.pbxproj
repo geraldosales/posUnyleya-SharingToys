@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B593130BCD2C48F4F920E78B /* Pods_Sharing_Toys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDE7B4E7BE6F1957CE52B96 /* Pods_Sharing_Toys.framework */; };
 		CC0FE99F26E5433E00BDDD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE99E26E5433E00BDDD21 /* AppDelegate.swift */; };
 		CC0FE9A126E5433E00BDDD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE9A026E5433E00BDDD21 /* SceneDelegate.swift */; };
 		CC0FE9A326E5433E00BDDD21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE9A226E5433E00BDDD21 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DFB43B8E95D9692AE4C6CAA /* Pods-Sharing Toys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharing Toys.release.xcconfig"; path = "Target Support Files/Pods-Sharing Toys/Pods-Sharing Toys.release.xcconfig"; sourceTree = "<group>"; };
+		6133C105F36EF5B4E242A379 /* Pods-Sharing Toys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharing Toys.debug.xcconfig"; path = "Target Support Files/Pods-Sharing Toys/Pods-Sharing Toys.debug.xcconfig"; sourceTree = "<group>"; };
+		8EDE7B4E7BE6F1957CE52B96 /* Pods_Sharing_Toys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharing_Toys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0FE99B26E5433E00BDDD21 /* Sharing Toys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sharing Toys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0FE99E26E5433E00BDDD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC0FE9A026E5433E00BDDD21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B593130BCD2C48F4F920E78B /* Pods_Sharing_Toys.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7B8EC8BA99F64DB5B075791 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6133C105F36EF5B4E242A379 /* Pods-Sharing Toys.debug.xcconfig */,
+				4DFB43B8E95D9692AE4C6CAA /* Pods-Sharing Toys.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CC0FE99226E5433E00BDDD21 = {
 			isa = PBXGroup;
 			children = (
 				CC0FE99D26E5433E00BDDD21 /* Sharing Toys */,
 				CC0FE99C26E5433E00BDDD21 /* Products */,
+				C7B8EC8BA99F64DB5B075791 /* Pods */,
+				DF0248ED88D2E3E382E2274B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = "Sharing Toys";
 			sourceTree = "<group>";
 		};
+		DF0248ED88D2E3E382E2274B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EDE7B4E7BE6F1957CE52B96 /* Pods_Sharing_Toys.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC0FE9AF26E5433F00BDDD21 /* Build configuration list for PBXNativeTarget "Sharing Toys" */;
 			buildPhases = (
+				F17D1EC6D1265F9CDED0F6B0 /* [CP] Check Pods Manifest.lock */,
 				CC0FE99726E5433E00BDDD21 /* Sources */,
 				CC0FE99826E5433E00BDDD21 /* Frameworks */,
 				CC0FE99926E5433E00BDDD21 /* Resources */,
@@ -131,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F17D1EC6D1265F9CDED0F6B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sharing Toys-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC0FE99726E5433E00BDDD21 /* Sources */ = {
@@ -283,6 +334,7 @@
 		};
 		CC0FE9B026E5433F00BDDD21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6133C105F36EF5B4E242A379 /* Pods-Sharing Toys.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +354,7 @@
 		};
 		CC0FE9B126E5433F00BDDD21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DFB43B8E95D9692AE4C6CAA /* Pods-Sharing Toys.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
