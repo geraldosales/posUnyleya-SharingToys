@@ -39,8 +39,8 @@ class Repository {
         }
     }
     
-    func addListener( completion: @escaping (QuerySnapshot?, Error?) -> Void  ) -> ListenerRegistration {
-        return firestore.collection(collectionName).order(by: "name", descending: false).addSnapshotListener(includeMetadataChanges: true, listener: { snapshot, error in
+    func addListener( completion: @escaping (QuerySnapshot?, Error?) -> Void  ) {//-> ListenerRegistration {
+        firestore.collection(collectionName).order(by: "name", descending: false).addSnapshotListener(includeMetadataChanges: true, listener: { snapshot, error in
             completion(snapshot, error)
         })
     }

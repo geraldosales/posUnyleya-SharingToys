@@ -12,7 +12,6 @@ class ListTableViewController: UITableViewController {
     
     var toys: [Toy] = []
     let repository = Repository.shared
-    var listener: ListenerRegistration!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +19,7 @@ class ListTableViewController: UITableViewController {
     }
 
     func loadToys() {
-        listener = repository.addListener(completion: { snapshot, error in
+        repository.addListener(completion: { snapshot, error in
             if let error = error {
                 print(error.localizedDescription)
             } else {
