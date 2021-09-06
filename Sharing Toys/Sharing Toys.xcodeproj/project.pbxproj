@@ -10,13 +10,15 @@
 		B593130BCD2C48F4F920E78B /* Pods_Sharing_Toys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDE7B4E7BE6F1957CE52B96 /* Pods_Sharing_Toys.framework */; };
 		CC0FE99F26E5433E00BDDD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE99E26E5433E00BDDD21 /* AppDelegate.swift */; };
 		CC0FE9A126E5433E00BDDD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE9A026E5433E00BDDD21 /* SceneDelegate.swift */; };
-		CC0FE9A326E5433E00BDDD21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE9A226E5433E00BDDD21 /* ViewController.swift */; };
 		CC0FE9A626E5433E00BDDD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0FE9A426E5433E00BDDD21 /* Main.storyboard */; };
 		CC0FE9A826E5433F00BDDD21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0FE9A726E5433F00BDDD21 /* Assets.xcassets */; };
 		CC0FE9AB26E5433F00BDDD21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0FE9A926E5433F00BDDD21 /* LaunchScreen.storyboard */; };
 		CC0FE9B526E56A4200BDDD21 /* Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE9B426E56A4200BDDD21 /* Toy.swift */; };
 		CC0FE9B726E56EF400BDDD21 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE9B626E56EF400BDDD21 /* ListTableViewController.swift */; };
 		CC0FE9B926E5741500BDDD21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC0FE9B826E5741500BDDD21 /* GoogleService-Info.plist */; };
+		CC0FE9BB26E57C9E00BDDD21 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE9BA26E57C9E00BDDD21 /* AddEditViewController.swift */; };
+		CC0FE9BD26E58EB900BDDD21 /* String+clear.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE9BC26E58EB900BDDD21 /* String+clear.swift */; };
+		CC0FE9C026E624B700BDDD21 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FE9BF26E624B700BDDD21 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +28,6 @@
 		CC0FE99B26E5433E00BDDD21 /* Sharing Toys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sharing Toys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0FE99E26E5433E00BDDD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC0FE9A026E5433E00BDDD21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC0FE9A226E5433E00BDDD21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC0FE9A526E5433E00BDDD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC0FE9A726E5433F00BDDD21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC0FE9AA26E5433F00BDDD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +35,9 @@
 		CC0FE9B426E56A4200BDDD21 /* Toy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toy.swift; sourceTree = "<group>"; };
 		CC0FE9B626E56EF400BDDD21 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		CC0FE9B826E5741500BDDD21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CC0FE9BA26E57C9E00BDDD21 /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
+		CC0FE9BC26E58EB900BDDD21 /* String+clear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+clear.swift"; sourceTree = "<group>"; };
+		CC0FE9BF26E624B700BDDD21 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,16 +84,50 @@
 			children = (
 				CC0FE99E26E5433E00BDDD21 /* AppDelegate.swift */,
 				CC0FE9A026E5433E00BDDD21 /* SceneDelegate.swift */,
-				CC0FE9A226E5433E00BDDD21 /* ViewController.swift */,
-				CC0FE9B626E56EF400BDDD21 /* ListTableViewController.swift */,
-				CC0FE9A426E5433E00BDDD21 /* Main.storyboard */,
+				CC0FE9BE26E6249C00BDDD21 /* Model */,
+				CC0FE9C126E6250E00BDDD21 /* Controller */,
+				CC0FE9C226E6251A00BDDD21 /* View */,
 				CC0FE9A726E5433F00BDDD21 /* Assets.xcassets */,
 				CC0FE9A926E5433F00BDDD21 /* LaunchScreen.storyboard */,
+				CC0FE9C326E6252400BDDD21 /* Extensions */,
 				CC0FE9AC26E5433F00BDDD21 /* Info.plist */,
 				CC0FE9B826E5741500BDDD21 /* GoogleService-Info.plist */,
-				CC0FE9B426E56A4200BDDD21 /* Toy.swift */,
 			);
 			path = "Sharing Toys";
+			sourceTree = "<group>";
+		};
+		CC0FE9BE26E6249C00BDDD21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC0FE9B426E56A4200BDDD21 /* Toy.swift */,
+				CC0FE9BF26E624B700BDDD21 /* Repository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC0FE9C126E6250E00BDDD21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC0FE9B626E56EF400BDDD21 /* ListTableViewController.swift */,
+				CC0FE9BA26E57C9E00BDDD21 /* AddEditViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC0FE9C226E6251A00BDDD21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC0FE9A426E5433E00BDDD21 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC0FE9C326E6252400BDDD21 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC0FE9BC26E58EB900BDDD21 /* String+clear.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DF0248ED88D2E3E382E2274B /* Frameworks */ = {
@@ -215,8 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC0FE9BD26E58EB900BDDD21 /* String+clear.swift in Sources */,
 				CC0FE9B526E56A4200BDDD21 /* Toy.swift in Sources */,
-				CC0FE9A326E5433E00BDDD21 /* ViewController.swift in Sources */,
+				CC0FE9C026E624B700BDDD21 /* Repository.swift in Sources */,
+				CC0FE9BB26E57C9E00BDDD21 /* AddEditViewController.swift in Sources */,
 				CC0FE99F26E5433E00BDDD21 /* AppDelegate.swift in Sources */,
 				CC0FE9B726E56EF400BDDD21 /* ListTableViewController.swift in Sources */,
 				CC0FE9A126E5433E00BDDD21 /* SceneDelegate.swift in Sources */,

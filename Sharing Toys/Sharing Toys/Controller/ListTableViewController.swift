@@ -9,17 +9,9 @@ import Firebase
 import UIKit
 
 class ListTableViewController: UITableViewController {
-    let collectionName = "sharingToys"
+    
     var toys: [Toy] = []
-    lazy var firestore: Firestore = {
-        let settings = FirestoreSettings()
-        settings.isPersistenceEnabled = true
-
-        let firestore = Firestore.firestore()
-        firestore.settings = settings
-        return firestore
-    }()
-
+    let repository = Repository.shared
     var listener: ListenerRegistration!
 
     override func viewDidLoad() {
@@ -28,12 +20,11 @@ class ListTableViewController: UITableViewController {
     }
 
     func loadToys() {
-        listener = firestore.collection(collectionName).order(by: "name", descending: false).addSnapshotListener(includeMetadataChanges: true, listener: { snapshot, error in
+        listener = repository.addListener(completion: { snapshot, error in
             if let error = error {
                 print(error.localizedDescription)
             } else {
                 guard let snapshop = snapshot else { return }
-                print("\(snapshop.documents.count)")
 
                 if snapshop.metadata.isFromCache || snapshop.documentChanges.count > 0 {
                     self.showItensFrom(snapshop)
@@ -51,8 +42,8 @@ class ListTableViewController: UITableViewController {
                let giver = data["giver"] as? String,
                let address = data["address"] as? String,
                let phone = data["phone"] as? String {
-                    let toy = Toy(name: name, state: state, giver: giver, address: address, phone: phone, id: remoteToy.documentID)
-                    toys.append(toy)
+                let toy = Toy(name: name, state: state, giver: giver, address: address, phone: phone, id: remoteToy.documentID)
+                toys.append(toy)
             }
         }
         tableView.reloadData()
@@ -69,17 +60,14 @@ class ListTableViewController: UITableViewController {
         return toys.count
     }
 
-    
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         cell.textLabel?.text = toys[indexPath.row].name
         cell.detailTextLabel?.text = toys[indexPath.row].getState()
-        
 
-         return cell
-     }
-     
+        return cell
+    }
 
     /*
      // Override to support conditional editing of the table view.
@@ -89,17 +77,20 @@ class ListTableViewController: UITableViewController {
      }
      */
 
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-         if editingStyle == .delete {
-             // Delete the row from the data source
-             tableView.deleteRows(at: [indexPath], with: .fade)
-         } else if editingStyle == .insert {
-             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-         }
-     }
-     */
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let toy = toys[indexPath.row]
+            repository.delete(toy: toy) { result in
+                switch result {
+                case .sucess:
+                    break
+                case .failure:
+                    break
+                }
+            }
+        }
+    }
 
     /*
      // Override to support rearranging the table view.
@@ -116,13 +107,13 @@ class ListTableViewController: UITableViewController {
      }
      */
 
-    /*
-     // MARK: - Navigation
+    // MARK: - Navigation
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-     }
-     */
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditSegue" {
+            let vc = segue.destination as! AddEditViewController
+            vc.toy = toys[tableView.indexPathForSelectedRow!.row]
+        }
+    }
 }
