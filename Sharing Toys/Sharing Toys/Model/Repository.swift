@@ -15,8 +15,8 @@ enum Response {
 
 class Repository {
     
-    let collectionName = "sharingToys"
-    lazy var firestore: Firestore = {
+    private let collectionName = "sharingToys"
+    private lazy var firestore: Firestore = {
         let settings = FirestoreSettings()
         settings.isPersistenceEnabled = true
 
